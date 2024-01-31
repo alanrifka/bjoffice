@@ -20,14 +20,23 @@ if(isset($_POST['edit-user'])){
 	header ("Location: daftaruser.php");	
 };
 // Input Surat Masuk
-if(isset($_POST['tbsuratmasuk'])){	
-	$idsuratmasuk = $_POST['idsuratmasuk'];
-	$file = $_FILES['file']['name'];
+if (isset($_POST['tblsuratmasuk'])) {
+	try {
+		$idsuratmasuk = $_POST['idsuratmasuk'];
+		$file = $_FILES['file']['name'];
+		$tmp_name = $_FILES['file']['tmp_name'];
 
-	move_uploaded_file($_FILES['file']['tmp_name'],"../berkas/$file");
+		// tentukan lokasi file akan dipindahkan
+		$dirUpload = "../berkas/";
 
-	$save=mysql_query("INSERT INTO tbsuratmasuk VALUES('$_POST[idsuratmasuk]','$_POST[nosurat]','$_POST[noreg]','$_POST[asalsurat]','$_POST[isi]','$_POST[klasifikasi]','$_POST[derajat]','$_POST[tglsurat]','$_POST[tglterima]','$_POST[keterangan]','$_POST[file]')") or die(mysql_error());
-	header ("Location: daftarsuratmasuk.php");	
+		// pindahkan file
+		$upload = move_uploaded_file($tmp_name, $dirUpload . $file);
+
+		$save = mysql_query("INSERT INTO tbsuratmasuk VALUES(null,'$_POST[nosurat]','$_POST[noreg]','$_POST[asalsurat]','$_POST[isi]','$_POST[klasifikasi]','$_POST[derajat]','$_POST[tglsurat]','$_POST[tglterima]','$_POST[keterangan]','$file')") or die(mysql_error());
+		header("Location: daftarsuratmasuk.php");
+	} catch (\Throwable $th) {
+		echo $th;
+	}
 };
 // Input Surat Keluar
 if(isset($_POST['tbsuratkeluar'])){	
