@@ -20,9 +20,8 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Daftar Surat Masuk</h2>
+                    <h2>Disposisi</h2>
                     <ul class="nav navbar-right panel_toolbox">
-                      <input type="text" class="form-control" placeholder="Search for...">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
                       <li class="dropdown">
@@ -49,6 +48,7 @@
                                     <th>Tanggal Diterima</th>
                                     <th>Keterangan</th>
                                     <th>File</th>
+                                    <th>Disposisi</th>
                                     <th>Action</th>
                                 </tr>
                       </thead>
@@ -73,12 +73,14 @@
                                     <td><?php echo $data['tglterima'] ?></td>
                                     <td><?php echo $data['keterangan'] ?></td>
                                     <td><?php echo $data['file'] ?></td>
+                                    <td><div >
+                                      <button  type="button" class="btn btn-warning"><a href="detaildisposisi.php>"></i> Disposisi </button>
                                     <td><div class="btn-group">
                                     <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit"></i> Action
-                                    <span class="caret"></span>
+                                      <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="../berkas/<?php echo $data['file']?>"><i class=" fa fa-download"> </i> Download</a>
+                                      <li><a href="../berkas/<?php echo $data['file']?>"><i class=" fa fa-download"> </i> Download</a>
                                         </li>
                                         <li><a href="edit-.php?id=<?php echo $data['iduser']?>"><i class=" fa fa-edit"></i> Edit</a>
                                         </li>

@@ -35,10 +35,6 @@
                     $newID = "S".sprintf("%05s",$noUrut);
                     ?>
                                         <form role="form" method="post" enctype= multipart/form-data action="aksi.php">
-                                        <div class="form-group">
-                                            <label>ID Surat</label>
-                                            <input class="form-control" name="idsuratkeluar" type="text" value="<?php echo $newID ?>" readonly>
-                                        </div>
                                         <div class="form-group">    
                                             <label>No Surat Keluar</label>
                                             <input class="form-control" name="nosuratkeluar" placeholder="No Surat Keluar ../../../"type="text">
@@ -75,7 +71,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label">File</label>
-                                            <input type="file" name="file" multiple="multiple" placeholder="Masukan file">
+                                            <input type="file" name="file" placeholder="Masukan file">
                                         </div>
                                         <button type="submit" name="tbsuratkeluar" class="btn btn-default">Simpan</button>
                                         <button type="reset" class="btn btn-default">Batal</button>

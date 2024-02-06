@@ -27,7 +27,7 @@ if(isset($_POST['tblsuratmasuk'])){
 
 		move_uploaded_file($_FILES['file']['tmp_name'], "../berkas/$file");
 
-		$save = mysql_query("INSERT INTO tbsuratmasuk VALUES('$_POST[idsuratmasuk]','$_POST[nosurat]','$_POST[noreg]','$_POST[asalsurat]','$_POST[isi]','$_POST[klasifikasi]','$_POST[derajat]','$_POST[tglsurat]','$_POST[tglterima]','$_POST[keterangan]',$file)") or die(mysql_error());
+		$save = mysql_query("INSERT INTO tbsuratmasuk VALUES('$_POST[idsuratmasuk]','$_POST[nosurat]','$_POST[noreg]','$_POST[asalsurat]','$_POST[isi]','$_POST[klasifikasi]','$_POST[derajat]','$_POST[tglsurat]','$_POST[tglterima]','$_POST[keterangan]','$file')") or die(mysql_error());
 		header("Location: daftarsuratmasuk.php");	
 	} catch (\Throwable $error) {
 		echo $error;
@@ -38,9 +38,9 @@ if(isset($_POST['tbsuratkeluar'])){
 	$idsuratmasuk = $_POST['idsuratkeluar'];
 	$file = $_FILES['file']['name'];
 
-	move_uploaded_file($_FILES['file']['tmp_name'],"../berkas/$file");
+	move_uploaded_file($_FILES['file']['tmp_name'],"../berkassuratkeluar/$file");
 
-	$save=mysql_query("INSERT INTO tbsuratkeluar VALUES('$_POST[idsuratkeluar]','$_POST[nosuratkeluar]','$_POST[noreg]','$_POST[tujuansurat]','$_POST[isi]','$_POST[klasifikasi]','$_POST[tglsurat]','$_POST[keterangan]','$_POST[file]')") or die(mysql_error());
+	$save=mysql_query("INSERT INTO tbsuratkeluar VALUES('$_POST[idsuratkeluar]','$_POST[nosuratkeluar]','$_POST[noreg]','$_POST[tujuansurat]','$_POST[isi]','$_POST[klasifikasi]','$_POST[tglsurat]','$_POST[keterangan]','$file')") or die(mysql_error());
 	header ("Location: daftarsuratkeluar.php");	
 };
 // Input Bagian

@@ -36,10 +36,6 @@
                                     ?>
                                     <form role="form" method="post" action="aksi.php" enctype="multipart/form-data">
                                         <div class="form-group">
-                                            <label>ID Surat</label>
-                                            <input class="form-control" name="idsuratmasuk" type="text" value="<?php echo $newID ?>" readonly>
-                                        </div>
-                                        <div class="form-group">
                                             <label>No Surat</label>
                                             <input class="form-control" name="nosurat" placeholder="No Surat .../.../../" type="text">
                                         </div>
@@ -67,7 +63,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Derajat</label>
-                                            <select class="form-control" name="jk">
+                                            <select class="form-control" name="derajat">
                                                 <option value="#" disabled selected hidden> Pilih </option>
                                                 <option value="segera">Segera</option>
                                                 <option value="biasa">Biasa</option>

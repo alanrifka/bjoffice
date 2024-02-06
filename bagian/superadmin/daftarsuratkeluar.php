@@ -73,7 +73,9 @@
                                     <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="edit-user.php?id=<?php echo $data['iduser']?>"><i class=" fa fa-edit"></i> Edit</a>
+                                      <li><a href="../berkas/<?php echo $data['file']?>"><i class=" fa fa-download"> </i> Download</a>
+                                        </li>
+                                        <li><a href="edit-.php?id=<?php echo $data['iduser']?>"><i class=" fa fa-edit"></i> Edit</a>
                                         </li>
                                         <li><a href="hapus-user.php?&hapus-kr=<?php echo $data['user'] ?>" onclick="return confirm('Apakah yakin akan menghapus data ini ?')"><i class=" fa fa-trash-o"></i> Hapus</a>
                                         </li>
