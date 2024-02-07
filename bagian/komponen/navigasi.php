@@ -1,7 +1,7 @@
 <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.php" class="site_title"><span>office</span></a>
+              <a href="index.php" class="site_title"><span>Surat Bank Jogja</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -35,12 +35,14 @@
                   <li><a><i class="fa fa-edit"></i> Input Data<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="user.php">Input User</a></li>
-                      <li><a href="suratmasuk.php">Input Surat Masuk</a></li>
-                      <li><a href="suratkeluar.php">Input Surat Keluar</a></li>
                       <li><a href="bagian.php">Input Bagian</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-table"></i>Daftar <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="suratmasuk.php"><i class=" fa fa-send"></i> Surat Masuk <span ></span></a>
+                  </li>
+                  <li><a href="suratkeluar.php"><i class=" fa fa-send-o"></i> Surat Keluar <span ></span></a>
+                  </li>
+                  <li><a><i class="fa fa-tasks"></i>Daftar <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="daftaruser.php">Daftar User</a></li>
                       <li><a href="daftarsuratmasuk.php">Daftar Surat Masuk</a></li>
@@ -48,16 +50,19 @@
                       <li><a href="daftarbagian.php">Daftar Bagian</a></li>
                       </ul>
                   </li>
-                  
-                  <li><a><i class="fa fa-table"></i>Disposisi <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-pencil"></i>Disposisi <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="disposisi.php">Disposisi</a></li>
                       </ul>
                   </li>
-              </div>
+                  </li>
+                  <li><a href="rekapsuratMasuk.php"><i class=" fa fa-folder"></i> Rekap Surat Masuk<span ></span></a>
+                  </li>
+                  <li><a href="rekapsuratkeluar.php"><i class=" fa fa-folder-o"></i> Rekap Surat Keluar<span ></span></a>
+                  </li>              </div>
               <div class="menu_section">
               </div>
-
+ 
             </div>
             <!-- /sidebar menu -->
 
