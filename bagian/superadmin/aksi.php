@@ -21,7 +21,6 @@ if(isset($_POST['edit-user'])){
 };
 
 // Input Surat Masuk
-<<<<<<< HEAD
 if(isset($_POST['tblsuratmasuk'])){	
 	try {
 		$idsuratmasuk = $_POST['idsuratmasuk'];
@@ -37,18 +36,18 @@ if(isset($_POST['tblsuratmasuk'])){
 };
 
 // Disposisi
-if(isset($_POST['disposisi'])){	
-	try {
-		$idsuratmasuk = $_POST['idsuratmasuk'];
-		$edit=mysql_query("update tbsuratmasuk set status='Disposisi' WHERE idsuratmasuk=".$idsuratmasuk."") or die(mysql_error());
-		
-		header("Location: disposisi.php");	
-	} catch (\Throwable $error) {
-		echo $error;
-	}
-};
+if (isset($_POST['disposisi'])) {
+	$idsuratmasuk = $_POST['idsuratmasuk'];
 
-=======
+	// Perintah update status surat masuk dari SUrat Masuk menjadi Disposisi
+	$edit = mysql_query("update tbsuratmasuk set status='Disposisi' WHERE idsuratmasuk=" . $idsuratmasuk . "") or die(mysql_error());
+
+	// Tambahkan perintah insert data ke tabel disposisi di sini
+
+	header("Location: disposisi.php");
+}
+;
+
 if (isset($_POST['tblsuratmasuk'])) {
 	try {
 		$idsuratmasuk = $_POST['idsuratmasuk'];
@@ -68,7 +67,6 @@ if (isset($_POST['tblsuratmasuk'])) {
 	}
 }
 ;
->>>>>>> 912799b (fixed surat masuk upload file)
 // Input Surat Keluar
 if(isset($_POST['tbsuratkeluar'])){	
 	$idsuratmasuk = $_POST['idsuratkeluar'];

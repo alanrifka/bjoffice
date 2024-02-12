@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include('../komponen/header.php'); ?>
+<?php
+session_start();
+include('../komponen/header.php'); 
+?>
 
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
-            <?php include('../komponen/navigasi.php'); ?>
+            <?php 
+            include('../komponen/navigasi.php'); 
+            ?>
 
             <!-- top navigation -->
             <?php include('../komponen/navigasiatas.php'); ?>

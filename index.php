@@ -27,6 +27,7 @@
      
 <?php
 	if (isset($_POST['login'])){
+        session_start();
 		include("koneksi.php");
 		$username = $_POST['username'];
 		$password     = md5($_POST['password']);
