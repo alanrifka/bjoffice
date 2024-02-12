@@ -1,9 +1,10 @@
 <?php
+
 $server ="localhost";
 $user ="root";
 $passwd ="";
 $db ="bjoffice";
-
+require_once "parser-php-version.php";
 $koneksi=mysql_connect($server,$user,$passwd) or die ("Gagal Konek ke server MySQL".mysql_error());
 $bukadb=mysql_select_db($db) or die ("Gagal Membuka database $db".mysql_error());
 

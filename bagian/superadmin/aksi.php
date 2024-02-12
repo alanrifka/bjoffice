@@ -1,6 +1,6 @@
 <?php
 include('../../koneksi.php');
-
+error_reporting(0);
 // Input user
 if(isset($_POST['user'])){	
 	$iduser = $_POST['iduser'];
@@ -21,6 +21,7 @@ if(isset($_POST['edit-user'])){
 };
 
 // Input Surat Masuk
+<<<<<<< HEAD
 if(isset($_POST['tblsuratmasuk'])){	
 	try {
 		$idsuratmasuk = $_POST['idsuratmasuk'];
@@ -47,6 +48,27 @@ if(isset($_POST['disposisi'])){
 	}
 };
 
+=======
+if (isset($_POST['tblsuratmasuk'])) {
+	try {
+		$idsuratmasuk = $_POST['idsuratmasuk'];
+		$file = $_FILES['file']['name'];
+		$tmp_name = $_FILES['file']['tmp_name'];
+
+		// tentukan lokasi file akan dipindahkan
+		$dirUpload = "../berkas/";
+
+		// pindahkan file
+		$upload = move_uploaded_file($tmp_name, $dirUpload . $file);
+
+		$save = mysql_query("INSERT INTO tbsuratmasuk VALUES(null,'$_POST[nosurat]','$_POST[noreg]','$_POST[asalsurat]','$_POST[isi]','$_POST[klasifikasi]','$_POST[derajat]','$_POST[tglsurat]','$_POST[tglterima]','$_POST[keterangan]','$file')") or die(mysql_error());
+		header("Location: daftarsuratmasuk.php");
+	} catch (\Throwable $th) {
+		echo $th;
+	}
+}
+;
+>>>>>>> 912799b (fixed surat masuk upload file)
 // Input Surat Keluar
 if(isset($_POST['tbsuratkeluar'])){	
 	$idsuratmasuk = $_POST['idsuratkeluar'];
