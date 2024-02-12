@@ -50,11 +50,7 @@
                       <li><a href="daftarbagian.php">Daftar Bagian</a></li>
                       </ul>
                   </li>
-                  <li><a><i class="fa fa-pencil"></i>Disposisi <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="disposisi.php">Disposisi</a></li>
-                      </ul>
-                  </li>
+                  <li><a href="Disposisi.php"><i class=" fa fa-pencil"></i> Disposisi<span ></span></a>
                   </li>
                   <li><a href="rekapsuratMasuk.php"><i class=" fa fa-folder"></i> Rekap Surat Masuk<span ></span></a>
                   </li>

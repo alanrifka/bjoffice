@@ -80,6 +80,8 @@
                                     <ul class="dropdown-menu" role="menu">
                                         <li><a href="../berkas/<?php echo $data['file']?>"><i class=" fa fa-download"> </i> Download</a>
                                         </li>
+                                        <li><a href="detaildisposisi.php?id=<?php echo $data['idsuratmasuk']?>"><i class=" fa fa-download"> </i> Desposisi</a>
+                                        </li>
                                         <li><a href="edit-.php?id=<?php echo $data['iduser']?>"><i class=" fa fa-edit"></i> Edit</a>
                                         </li>
                                         <li><a href="hapus-.php?&hapus-kr=<?php echo $data['user'] ?>" onclick="return confirm('Apakah yakin akan menghapus data ini ?')"><i class=" fa fa-trash-o"></i> Hapus</a>

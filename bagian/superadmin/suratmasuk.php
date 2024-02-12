@@ -80,7 +80,7 @@
                                         <div class="form-group">
                                             <label>Keterangan</label>
                                             <textarea class="form-control" name="keterangan" rows="3" placeholder="Keterangan" type="text"></textarea>
-                                        </div>
+                                        </div> 
                                         <div class="form-group">
                                             <label class="control-label">File</label>
                                             <input type="file" name="file" placeholder="Masukan file">

@@ -19,6 +19,7 @@ if(isset($_POST['edit-user'])){
 	
 	header ("Location: daftaruser.php");	
 };
+
 // Input Surat Masuk
 if(isset($_POST['tblsuratmasuk'])){	
 	try {
@@ -27,12 +28,25 @@ if(isset($_POST['tblsuratmasuk'])){
 
 		move_uploaded_file($_FILES['file']['tmp_name'], "../berkas/$file");
 
-		$save = mysql_query("INSERT INTO tbsuratmasuk VALUES('$_POST[idsuratmasuk]','$_POST[nosurat]','$_POST[noreg]','$_POST[asalsurat]','$_POST[isi]','$_POST[klasifikasi]','$_POST[derajat]','$_POST[tglsurat]','$_POST[tglterima]','$_POST[keterangan]','$file')") or die(mysql_error());
+		$save = mysql_query("INSERT INTO tbsuratmasuk VALUES('$_POST[idsuratmasuk]','$_POST[nosurat]','$_POST[noreg]','$_POST[asalsurat]','$_POST[isi]','$_POST[klasifikasi]','$_POST[derajat]','$_POST[tglsurat]','$_POST[tglterima]','$_POST[keterangan],'Surat Masuk','$file')") or die(mysql_error());
 		header("Location: daftarsuratmasuk.php");	
 	} catch (\Throwable $error) {
 		echo $error;
 	}
 };
+
+// Disposisi
+if(isset($_POST['disposisi'])){	
+	try {
+		$idsuratmasuk = $_POST['idsuratmasuk'];
+		$edit=mysql_query("update tbsuratmasuk set status='Disposisi' WHERE idsuratmasuk=".$idsuratmasuk."") or die(mysql_error());
+		
+		header("Location: disposisi.php");	
+	} catch (\Throwable $error) {
+		echo $error;
+	}
+};
+
 // Input Surat Keluar
 if(isset($_POST['tbsuratkeluar'])){	
 	$idsuratmasuk = $_POST['idsuratkeluar'];

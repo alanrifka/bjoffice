@@ -40,6 +40,7 @@
 		}else{
 			$row = mysql_fetch_assoc($query1);
 			if($row['level']=='superadmin'){
+                $_SESSION['iduser']=$row['iduser'];
 				$_SESSION['nama']=$row['nama'];
 				$_SESSION['alamat']=$row['alamat'];
 				$_SESSION['umur']=$row['umur'];
@@ -48,6 +49,7 @@
 				$_SESSION['level']='admin';
 				header("Location:bagian/superadmin/index.php");
         }else if($row['level']=='admin'){
+                $_SESSION['iduser']=$row['iduser'];
                 $_SESSION['nama']=$row['nama'];
                 $_SESSION['alamat']=$row['alamat'];
                 $_SESSION['umur']=$row['umur'];
@@ -56,6 +58,7 @@
                 $_SESSION['level']='admin';
                 header("Location:bagian/admin/index.php");
         }else if($row['level']=='user'){
+                $_SESSION['iduser']=$row['iduser'];
                 $_SESSION['nama']=$row['nama'];
                 $_SESSION['alamat']=$row['alamat'];
                 $_SESSION['umur']=$row['umur'];
