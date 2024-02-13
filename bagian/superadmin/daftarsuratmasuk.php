@@ -16,28 +16,18 @@
 
          <!-- isi disini -->
               
-          <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Daftar Surat Masuk</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <input type="text" class="form-control" placeholder="Search for...">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">  
-                        </ul>
-                      </li>
-                      
-                    </ul>
+                    <h2>Daftar Surat Masuk </h2> 
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <table id="datatable" class="table table-striped table-bordered">
-                      <thead>
-                        <tr>
+                      <div class="row">
+                          <div class="col-sm-12">
+                            <div class="card-box table-responsive">
+                    <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                                     <th>No</th>
                                     <th>No Surat</th>
                                     <th>No Regrestrasi</th>
@@ -49,6 +39,7 @@
                                     <th>Tanggal Diterima</th>
                                     <th>Keterangan</th>
                                     <th>File</th>
+                                    <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                       </thead>
@@ -73,14 +64,14 @@
                                     <td><?php echo $data['tglterima'] ?></td>
                                     <td><?php echo $data['keterangan'] ?></td>
                                     <td><?php echo $data['file'] ?></td>
+                                    <td><div >
+                                    <button  type="" class="btn btn-success"><?php echo $data['status_surat']?></button>
                                     <td><div class="btn-group">
-                                    <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit"></i> Action
+                                    <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"><i class=""></i> Action
                                     <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
                                         <li><a href="../berkas/<?php echo $data['file']?>"><i class=" fa fa-download"> </i> Download</a>
-                                        </li>
-                                        <li><a href="detaildisposisi.php?id=<?php echo $data['idsuratmasuk']?>"><i class=" fa fa-download"> </i> Desposisi</a>
                                         </li>
                                         <li><a href="edit-.php?id=<?php echo $data['iduser']?>"><i class=" fa fa-edit"></i> Edit</a>
                                         </li>
@@ -99,7 +90,7 @@
 
          
         <!-- /page content -->
-
+        
         <!-- footer content -->
         <?php include ('../komponen/footer.php')?>
         <!-- /footer content -->

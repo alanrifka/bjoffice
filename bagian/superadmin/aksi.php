@@ -28,14 +28,15 @@ if(isset($_POST['tblsuratmasuk'])){
 
 		move_uploaded_file($_FILES['file']['tmp_name'], "../berkas/$file");
 
-		$save = mysql_query("INSERT INTO tbsuratmasuk VALUES('$_POST[idsuratmasuk]','$_POST[nosurat]','$_POST[noreg]','$_POST[asalsurat]','$_POST[isi]','$_POST[klasifikasi]','$_POST[derajat]','$_POST[tglsurat]','$_POST[tglterima]','$_POST[keterangan],'Surat Masuk','$file')") or die(mysql_error());
+		$save = mysql_query("INSERT INTO tbsuratmasuk VALUES('$_POST[idsuratmasuk]','$_POST[nosurat]','$_POST[noreg]','$_POST[asalsurat]','$_POST[isi]','$_POST[klasifikasi]','$_POST[derajat]','$_POST[tglsurat]','$_POST[tglterima]','$_POST[keterangan]','Surat Masuk','$file')") or die(mysql_error());
 		header("Location: daftarsuratmasuk.php");	
 	} catch (\Throwable $error) {
 		echo $error;
 	}
-};
+}
+;
 
-// Disposisi
+	// Disposisi
 if (isset($_POST['disposisi'])) {
 	$idsuratmasuk = $_POST['idsuratmasuk'];
 
@@ -43,6 +44,11 @@ if (isset($_POST['disposisi'])) {
 	$edit = mysql_query("update tbsuratmasuk set status='Disposisi' WHERE idsuratmasuk=" . $idsuratmasuk . "") or die(mysql_error());
 
 	// Tambahkan perintah insert data ke tabel disposisi di sini
+if (isset($_POST['tbldisposisi'])) {
+		$iddisposisi = $_POST['iddisposisi']
+
+		$save = mysql_query("INSERT INTO tbdisposisi JOIN tbsuratmasuk  VALUES('$_POST[iddesposisi]','$_POST[tujuandisposisi]','$_POST[tgldisposisi]','$_POST[bataswaktu]','$_POST[catatan]','$_POST[idsuratmasuk]','$_POST[iduser])") or die(mysql_error());
+}
 
 	header("Location: disposisi.php");
 }
@@ -67,6 +73,7 @@ if (isset($_POST['tblsuratmasuk'])) {
 	}
 }
 ;
+
 // Input Surat Keluar
 if(isset($_POST['tbsuratkeluar'])){	
 	$idsuratmasuk = $_POST['idsuratkeluar'];
@@ -77,6 +84,8 @@ if(isset($_POST['tbsuratkeluar'])){
 	$save=mysql_query("INSERT INTO tbsuratkeluar VALUES('$_POST[idsuratkeluar]','$_POST[nosuratkeluar]','$_POST[noreg]','$_POST[tujuansurat]','$_POST[isi]','$_POST[klasifikasi]','$_POST[tglsurat]','$_POST[keterangan]','$file')") or die(mysql_error());
 	header ("Location: daftarsuratkeluar.php");	
 };
+
+
 // Input Bagian
 if(isset($_POST['tbbagian'])){
 	$idbagian = $_POST['idbagian'];	

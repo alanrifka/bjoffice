@@ -61,7 +61,7 @@
                                     <td><?php echo $data['keterangan'] ?></td>
                                     <td><?php echo $data['file'] ?></td>
                                     <td><div class="btn-group">
-                                    <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit"></i> Action
+                                    <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown"><i class=""></i> Action
                                     <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" role="menu">

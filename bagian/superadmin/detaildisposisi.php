@@ -50,29 +50,7 @@ include('../komponen/header.php');
                                             <label class="control-label col-md-3 col-sm-3 ">Tanggal Disposisi</label>
                                             <div class="col-md-9 col-sm-9 ">
                                                 <input type="date" class="form-control"  name="tgldisposisi" placeholder="" type="date">
-                                         </div>
-                                         <div class="form-group row ">
-                                            <label class="control-label col-md-3 col-sm-3 ">Derajat</label>
-                                            <div class="col-md-9 col-sm-9 ">
-                                                <select class="form-control" name="derajat">
-                                                    <option value="#" disabled selected hidden> Pilih </option>
-                                                    <option value="segera">Segera</option>
-                                                    <option value="biasa">Biasa</option>
-                                                </select>
-                                         </div>
-                                         </div>
-                                        <div class="form-group row  ">
-                                            <label label class="control-label col-md-3 col-sm-3 ">Klasifikasi</label>
-                                            <div class="col-md-9 col-sm-9 ">
-                                            <select class="form-control" name="klasifikasi">
-                                                <option value="#" disabled selected hidden> Pilih </option>
-                                                <option value="Sangat Rahasia">Sangat Rhasia</option>
-                                                <option value="Rahasia">Rahasia</option>
-                                                <option value="Biasa">Biasa</option>
-                                                <option value="Pemberitahuan">Pemberitahuan</option>
-                                            </select>
-                                        </div>
-                                        </div>
+                                         </div> 
                                          <div class="form-group row ">
                                             <label class="control-label col-md-3 col-sm-3 ">Batas Waktu</label>
                                             <div class="col-md-9 col-sm-9 ">
