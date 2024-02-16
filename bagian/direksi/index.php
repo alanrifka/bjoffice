@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <?php
 session_start();
 error_reporting(0);
-  if($_SESSION['level']!=='superadmin'){
+  if($_SESSION['level']!=='direksi'){
     
     echo"<script>window.alert('Anda tidak mempunyai hak akses untuk halaman ini!. Silahkan login kembali untuk masuk ke halaman yang anda tuju.');window.location=(../logout.php')</script>";
     
@@ -19,7 +18,7 @@ error_reporting(0);
         <!-- top navigation -->
         <?php include ('../komponen/navigasiatas.php');?>
 
-        <?php include ('../komponen/navigasi.php');?>
+        <?php include ('../komponen/navigasidireksi.php');?>
         <!-- /top navigation -->
         <div class="right_col" role="main">
          <div class="row">
@@ -53,7 +52,7 @@ error_reporting(0);
                           <img class="img-responsive avatar-view" src="../../image/7309681.jpg" alt="Avatar" title="Change the avatar">
                         </div>
                       </div>
-                      <h3 class="name"><?php  echo $_SESSION ['nama'] ?></h3>
+                      <h3  class="name">Akses: <?php  echo $_SESSION ['nama'] ?></h3>
 
                       <ul class="list-unstyled user_data">
                         <li><i class="fa fa-map-marker user-profile-icon"></i> Yogyakarta, Ina

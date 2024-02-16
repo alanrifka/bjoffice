@@ -1,3 +1,12 @@
+<?php
+session_start();
+error_reporting(0);
+  if($_SESSION['level']!=='superadmin'){
+    
+    echo"<script>window.alert('Anda tidak mempunyai hak akses untuk halaman ini!. Silahkan login kembali untuk masuk ke halaman yang anda tuju.');window.location=(../logout.php')</script>";
+    
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include ('../komponen/header.php');?>
@@ -93,6 +102,59 @@
         
         <!-- footer content -->
         <?php include ('../komponen/footer.php')?>
+        <script src="build/js/jquery.table2excel.js"></script> 
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var t = $('#masterdata').dataTable( {                  
+          "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ],     
+        }
+        );
+      });        
+    </script>   
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var t = $('#masterdata0001').dataTable( {                  
+          "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ],     
+        }
+        );
+      });        
+    </script>   
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var t = $('#masterdata0002').dataTable( {                  
+          "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ],     
+        }
+        );
+      });        
+    </script>      
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var t = $('#masterdata0000').dataTable( {                  
+          "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ],     
+        }
+        );
+      });        
+    </script>     
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var t = $('#masterdata0000all').dataTable( {                  
+          "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ],     
+        }
+        );
+      });        
+    </script>      
+
+    <script src="vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.tanggal').datepicker({
+          format: "yyyy-mm-dd",
+          autoclose:true,
+          todayHighlight:true,
+
+        });
+      });
+    </script>   
         <!-- /footer content -->
       </div>
     </div>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-  if($_SESSION['level']!=='superadmin'){
+  if($_SESSION['level']!=='direksi'){
     
     echo"<script>window.alert('Anda tidak mempunyai hak akses untuk halaman ini!. Silahkan login kembali untuk masuk ke halaman yang anda tuju.');window.location=(../logout.php')</script>";
     
@@ -18,7 +18,7 @@ include('../komponen/header.php');
     <div class="container body">
         <div class="main_container">
             <?php 
-            include('../komponen/navigasi.php'); 
+            include('../komponen/navigasidireksi.php'); 
             ?>
 
             <!-- top navigation -->
@@ -48,7 +48,7 @@ include('../komponen/header.php');
                                     $noUrut++;
                                     $newID = "S" . sprintf("%05s", $noUrut);
                                     ?>
-                                    <form class="form-horizontal form-label-left" method="post" action="aksi.php" enctype="multipart/form-data">
+                                    <form class="form-horizontal form-label-left" method="post" action="../aksi.php" enctype="multipart/form-data">
                                         <div class="form-group row ">
                                             <label class="control-label col-md-3 col-sm-3 ">Tujuan Disposisi</label>
                                             <div class="col-md-9 col-sm-9 ">

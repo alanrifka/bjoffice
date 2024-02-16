@@ -1,5 +1,13 @@
-
-<!DOCTYPE html>
+<?php
+session_start();
+error_reporting(0);
+  if($_SESSION['level']!=='superadmin'){
+    
+    echo"<script>window.alert('Anda tidak mempunyai hak akses untuk halaman ini!. Silahkan login kembali untuk masuk ke halaman yang anda tuju.');window.location=(../logout.php')</script>";
+    
+  }
+?>
+?><!DOCTYPE html>
 <html lang="en">
 <?php include ('../komponen/header.php');?>
 
@@ -34,7 +42,7 @@
                     $noUrut++;
                     $newID = "B".sprintf("%05s",$noUrut);
                     ?>
-                                        <form role="form" method="post" action="aksi.php">
+                                        <form role="form" method="post" action="../aksi.php">
                                         <div class="form-group">
                                             <label>ID Bagian</label>
                                             <input class="form-control" name="idbagian" type="text" value="<?php echo $newID ?>" readonly>

@@ -7,7 +7,7 @@
 
     <title>Surat Bank Jogja</title>
     
-
+    <link rel="shortcut icon" type="image/png/jpg" href="../../image/logoatas.png">
     <!-- Bootstrap -->
     <link href="../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->

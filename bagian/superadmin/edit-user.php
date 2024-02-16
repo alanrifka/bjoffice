@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<?php
+session_start();
+error_reporting(0);
+  if($_SESSION['level']!=='superadmin'){
+    
+    echo"<script>window.alert('Anda tidak mempunyai hak akses untuk halaman ini!. Silahkan login kembali untuk masuk ke halaman yang anda tuju.');window.location=(../logout.php')</script>";
+    
+  }
+?><!DOCTYPE html>
+
 <html lang="en">
 <?php include ('../komponen/header.php');?>
 

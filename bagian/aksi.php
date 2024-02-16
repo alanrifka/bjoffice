@@ -1,12 +1,12 @@
 <?php
-include('../../koneksi.php');
+include('../koneksi.php');
 error_reporting(0);
 // Input user
 if(isset($_POST['user'])){	
 	$iduser = $_POST['iduser'];
 	
 	$password = md5($_POST['password']);
-	$save=mysql_query("INSERT INTO user VALUES('$_POST[iduser]','$_POST[name]','$_POST[username]','$password','$_POST[level]')") or die(mysql_error());
+	$save=mysql_query("INSERT INTO user VALUES('$_POST[iduser]','$_POST[nama]','$_POST[username]','$password','$_POST[level]')") or die(mysql_error());
 	header ("Location:daftaruser.php");	
 };
 
@@ -15,7 +15,7 @@ if(isset($_POST['edit-user'])){
 	$password = md5($_POST['password']);
 	$nama = $_POST['nama'];		
 	
-	$edit=mysql_query("update user set nama='$_POST[nama]', username='$_POST[username]', password='$password' , level='$_POST[level]'") or die(mysql_error());
+	$edit=mysql_query("update user set nama='$_POST[nama]', alamat='$_POST[alamat]', umur='$_POST[umur]', username='$_POST[username]', password='$password' , level='$_POST[level]'") or die(mysql_error());
 	
 	header ("Location: daftaruser.php");	
 };
@@ -44,11 +44,6 @@ if (isset($_POST['disposisi'])) {
 	$edit = mysql_query("update tbsuratmasuk set status='Disposisi' WHERE idsuratmasuk=" . $idsuratmasuk . "") or die(mysql_error());
 
 	// Tambahkan perintah insert data ke tabel disposisi di sini
-	if (isset($_POST['tbldisposisi'])) {
-		$iddisposisi = $_POST['iddisposisi']
-
-		$save = mysql_query("INSERT INTO tbdisposisi JOIN tbsuratmasuk  VALUES('$_POST[iddesposisi]','$_POST[tujuandisposisi]','$_POST[tgldisposisi]','$_POST[bataswaktu]','$_POST[catatan]','$_POST[idsuratmasuk]") or die(mysql_error());
-}
 
 	header("Location: disposisi.php");
 }
@@ -82,7 +77,7 @@ if(isset($_POST['tbsuratkeluar'])){
 	move_uploaded_file($_FILES['file']['tmp_name'],"../berkassuratkeluar/$file");
 
 	$save=mysql_query("INSERT INTO tbsuratkeluar VALUES('$_POST[idsuratkeluar]','$_POST[nosuratkeluar]','$_POST[noreg]','$_POST[tujuansurat]','$_POST[isi]','$_POST[klasifikasi]','$_POST[tglsurat]','$_POST[keterangan]','$file')") or die(mysql_error());
-	header ("Location: daftarsuratkeluar.php");	
+	header ("Location: ../daftarsuratkeluar.php");	
 };
 
 

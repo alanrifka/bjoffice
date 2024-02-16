@@ -1,4 +1,12 @@
-
+<?php
+session_start();
+error_reporting(0);
+  if($_SESSION['level']!=='superadmin'){
+    
+    echo"<script>window.alert('Anda tidak mempunyai hak akses untuk halaman ini!. Silahkan login kembali untuk masuk ke halaman yang anda tuju.');window.location=(../logout.php')</script>";
+    
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include ('../komponen/header.php');?>
@@ -34,7 +42,7 @@
                     $noUrut++;
                     $newID = "K".sprintf("%05s",$noUrut);
                     ?>
-                                        <form role="form" method="post" action="aksi.php">
+                                        <form role="form" method="post" action="../aksi.php">
                                         <div class="form-group">
                                             <label>ID User</label>
                                             <input class="form-control" name="iduser" type="text" value="<?php echo $newID ?>" readonly>
@@ -42,14 +50,6 @@
                                         <div class="form-group">
                                             <label>Nama User</label>
                                             <input class="form-control" name="nama" placeholder="Masukan Nama"type="text">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Alamat</label>
-                                            <textarea class="form-control" name="alamat" placeholder="Masukan Alamat" rows="3" type="text"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Umur</label>
-                                            <input class="form-control" name="umur" placeholder="Masukan Umur"  type="text">
                                         </div>
                                         <div class="form-group">
                                             <label>Username</label>
@@ -64,8 +64,8 @@
                                             <select class="form-control" name="level">
                                             <option value="#" disabled selected hidden> Pilih </option>
                                             <option value="superadmin">Super Admin </option>
-                                            <option value="admin">Admin</option>
                                             <option value="user">User</option>
+                                            <option value="direksi">Direksi</option>
                                             </select>
                                         </div>
                                         <button type="submit" name="user" class="btn btn-default">Simpan</button>
