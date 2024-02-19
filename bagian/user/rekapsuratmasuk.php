@@ -14,7 +14,7 @@ error_reporting(0);
 <body class="nav-md">
   <div class="container body">
     <div class="main_container">
-      <?php include ('../komponen/navigasi.php');?>
+      <?php include ('../komponen/navigasiuser.php');?>
 
       <!-- top navigation -->
       <?php include ('../komponen/navigasiatas.php');?>

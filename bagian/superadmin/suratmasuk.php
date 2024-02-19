@@ -18,9 +18,6 @@ error_reporting(0);
 
             <!-- top navigation -->
             <?php include('../komponen/navigasiatas.php'); ?>
-            <!-- /top navigation -->
-
-            <!-- page content -->
             <div class="right_col" role="main">
 
          <!-- isi disini -->
@@ -30,7 +27,6 @@ error_reporting(0);
                   <h2>Input Surat Masuk </h2>
                   <div class="x_title">
                 <div class="col-lg-12"><p></p>
-                        <!-- /.panel-heading -->
                         
                     <!-- Auto ID .-->
                     <?php
@@ -96,23 +92,12 @@ error_reporting(0);
                                         <button type="submit" name="tblsuratmasuk" class="btn btn-default">Simpan</button>
                                         <button type="reset" class="btn btn-default">Batal</button>
                                     </form>
-                                    <!-- /.panel-body -->
                                 </div>
-                                <!-- /.panel -->
                             </div>
-
-
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
-            <!-- /page content -->
-
-            <!-- footer content -->
             <?php include('../komponen/footer.php') ?>
             <!-- /footer content -->
         </div>

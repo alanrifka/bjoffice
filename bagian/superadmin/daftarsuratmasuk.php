@@ -52,8 +52,6 @@ error_reporting(0);
                                     <th>Action</th>
                                 </tr>
                       </thead>
-
-
                       <tbody>
                         <?php
           include "../../koneksi.php";
@@ -94,13 +92,6 @@ error_reporting(0);
                 </div>
               </div>
          </div>
-
-
-
-         
-        <!-- /page content -->
-        
-        <!-- footer content -->
         <?php include ('../komponen/footer.php')?>
         <script src="build/js/jquery.table2excel.js"></script> 
     <script type="text/javascript">

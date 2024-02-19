@@ -14,7 +14,7 @@ error_reporting(0);
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
-        <?php include ('../komponen/navigasi.php');?>
+        <?php include ('../komponen/navigasiuser.php');?>
 
         <!-- top navigation -->
         <?php include ('../komponen/navigasiatas.php');?>
@@ -22,17 +22,12 @@ error_reporting(0);
 
         <!-- page content -->
         <div class="right_col" role="main">
-
-         <!-- isi disini -->
-       <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <h2>Input Surat Keluar </h2>
-                  <div class="x_title">
-                <div class="col-lg-12"><p></p>
-                        <!-- /.panel-heading -->
-                        
-                    <!-- Auto ID .-->
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                      <h2>Input Surat Keluar </h2>
+                      <div class="x_title">
+                    <div class="col-lg-12"><p></p>
                     <?php
                     include('../../koneksi.php');
                     $query = mysql_query("Select max(idsuratkeluar) as maxID FROM tbsuratkeluar");
@@ -84,25 +79,13 @@ error_reporting(0);
                                         <button type="submit" name="tbsuratkeluar" class="btn btn-default">Simpan</button>
                                         <button type="reset" class="btn btn-default">Batal</button>
                                     </form>
-                        <!-- /.panel-body -->
+                                </div>
+                            </div>
+                          </div>
+                        </div>
                     </div>
-                    <!-- /.panel -->
                 </div>
-
-
-         </div>
-         </div>
-         </div>
-         </div>
-
-
-
-         
-        <!-- /page content -->
-
-        <!-- footer content -->
         <?php include ('../komponen/footer.php')?>
-        <!-- /footer content -->
       </div>
     </div>
 <?php include ('../komponen/js.php')?>	

@@ -53,8 +53,6 @@ error_reporting(0);
                                     <th>Action</th>
                                 </tr>
                       </thead>
-
-
                       <tbody>
                         <?php
           include "../../koneksi.php";
@@ -84,15 +82,7 @@ error_reporting(0);
                 </div>
               </div>
          </div>
-
-
-
-         
-        <!-- /page content -->
-
-        <!-- footer content -->
         <?php include ('../komponen/footer.php')?>
-        <!-- /footer content -->
       </div>
     </div>
 <?php include ('../komponen/js.php')?>	

@@ -16,8 +16,6 @@ if(! isset($_SESSION['iduser'])) {
         <!-- top navigation -->
         <?php include ('../komponen/navigasiatas.php');?>
         <!-- /top navigation -->
-
-        <!-- page content -->
         <div class="right_col" role="main">
 
          <!-- isi disini -->
@@ -85,15 +83,7 @@ if(! isset($_SESSION['iduser'])) {
                 </div>
               </div>
          </div>
-
-
-
-         
-        <!-- /page content -->
-
-        <!-- footer content -->
         <?php include ('../komponen/footer.php')?>
-        <!-- /footer content -->
       </div>
     </div>
 <?php include ('../komponen/js.php')?>	

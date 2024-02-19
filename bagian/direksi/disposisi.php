@@ -101,14 +101,7 @@ error_reporting(0);
                   </div>
                 </div>
               </div>
-         </div>
-
-
-
-         
-        <!-- /page content -->
-
-        <!-- footer content -->
+          </div>
         <?php include ('../komponen/footer.php')?>
         <!-- /footer content -->
       </div>

@@ -9,24 +9,8 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="flex">
-                              <ul class="list-inline widget_profile_box">
-                                <li>
-                                  <a>
-                                  </a>
-                                </li>
-                                <li>
-                                  <img src="../../image/bj.png"alt="..." class="img-circle profile_img">
-                                </li>
-                                <li>
-                                  <a>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
             </div>
-            <!-- /menu profile quick info -->
-
-            <!-- sidebar menu -->
+            </div>
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">

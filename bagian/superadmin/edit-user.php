@@ -75,23 +75,12 @@ error_reporting(0);
                     <button type="submit" name="edit-user" class="btn btn-default">Simpan</button>
                     <button type="reset" class="btn btn-default">Batal</button>
                     </form>
-                        <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel -->
                 </div>
-
-
+            </div>
          </div>
+        </div>
          </div>
-         </div>
-         </div>
-
-
-
-         
-        <!-- /page content -->
-
-        <!-- footer content -->
         <?php include ('../komponen/../komponen/footer.php')?>
         <!-- /footer content -->
       </div>

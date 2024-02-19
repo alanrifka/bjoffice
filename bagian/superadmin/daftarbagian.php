@@ -7,7 +7,7 @@ error_reporting(0);
     
   }
 ?>
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <?php include ('../komponen/header.php');?>
 
@@ -18,28 +18,14 @@ error_reporting(0);
 
         <!-- top navigation -->
         <?php include ('../komponen/navigasiatas.php');?>
-        <!-- /top navigation -->
-
+        
         <!-- page content -->
         <div class="right_col" role="main">
-
-         <!-- isi disini -->
-              
           <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Daftar Surat Keluar</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">  
-                        </ul>
-                      </li>
-                      
-                    </ul>
+                    <h2>Daftar Bagian</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -49,10 +35,8 @@ error_reporting(0);
                                     <th>No</th>
                                     <th>Bagian</th>
                                     <th>Action</th>
-                                </tr>
+                        </tr>
                       </thead>
-
-
                       <tbody>
                         <?php
           include "../../koneksi.php";
@@ -80,15 +64,7 @@ error_reporting(0);
                 </div>
               </div>
          </div>
-
-
-
-         
-        <!-- /page content -->
-
-        <!-- footer content -->
         <?php include ('../komponen/footer.php')?>
-        <!-- /footer content -->
       </div>
     </div>
 <?php include ('../komponen/js.php')?>	

@@ -54,23 +54,12 @@ error_reporting(0);
                                         <button type="submit" name="tbbagian" class="btn btn-default">Simpan</button>
                                         <button type="reset" class="btn btn-default">Batal</button>
                                     </form>
-                        <!-- /.panel-body -->
+                                </div>
+                             </div>
+                          </div>
+                      </div>
                     </div>
-                    <!-- /.panel -->
                 </div>
-
-
-         </div>
-         </div>
-         </div>
-         </div>
-
-
-
-         
-        <!-- /page content -->
-
-        <!-- footer content -->
         <?php include ('../komponen/footer.php')?>
         <!-- /footer content -->
       </div>

@@ -32,10 +32,6 @@ error_reporting(0);
               <h2>Rekap Surat Masuk</h2>
               <ul class="nav navbar-right panel_toolbox">
                 <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search for...">
-                  <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Go!</button>
-                  </span>
                 </div>
               </ul>
               <div class="clearfix"></div>
@@ -43,11 +39,11 @@ error_reporting(0);
 
             <div class="col-md-3 col-sm-9 col-xs-12">      
             <label class="control-label">Mulai Tanggal</label>      
-            <input type="text" name="start_date" id="start_date" class="form-control tanggal" autocomplete="off"/>
+            <input type="date" name="start_date" id="start_date" class="form-control tanggal" autocomplete="off"/>
           </div>
           <div class="col-md-3 col-sm-9 col-xs-12">
             <label class="control-label">Sampai Tanggal</label>      
-            <input type="text" name="end_date" id="end_date" class="form-control tanggal" autocomplete="off"/>
+            <input type="date" name="end_date" id="end_date" class="form-control tanggal" autocomplete="off"/>
           </div>              
           <div class="col-md-3 col-sm-9 col-xs-12">
             <label class="control-label"></label>      

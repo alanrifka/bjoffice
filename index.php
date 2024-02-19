@@ -8,7 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>office Bank Jogja</title>
+
+    <title>Surat Bank Jogja</title>
+    
+    <link rel="shortcut icon" type="image/png/jpg" href="image/logoatas.png">
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -81,7 +84,7 @@
                     <div class="panel-body">
                         <img src="image/logobj1.png" alt="">
                         <form role="form" method="post">
-                            <h1 class="panel-title"> Form Login</h1>
+                            <h1 class="panel-title">Login</h1>
 
                             <fieldset>
                                 <div class="form-group">

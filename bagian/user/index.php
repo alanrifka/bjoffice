@@ -129,18 +129,11 @@ error_reporting(0);
               </div>
             </div>
           </div>
-        <!-- /page content -->
-                            
-        <!-- page content -->
         </div>
-         <!-- isi disini -->
-        <!-- /page content -->
-
         <!-- footer content -->
         <?php include ('../komponen/footer.php')?>
         <!-- /footer content -->
       </div>
-      
     </div>
 <?php include ('../komponen/js.php')?>  
   </body>

@@ -30,8 +30,6 @@ error_reporting(0);
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Daftar Surat Keluar</h2>
-                    
-                  <input type="text" class="form-control" placeholder="Search for...">
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -88,13 +86,6 @@ error_reporting(0);
                 </div>
               </div>
          </div>
-
-
-
-         
-        <!-- /page content -->
-
-        <!-- footer content -->
         <?php include ('../komponen/footer.php')?>
         <!-- /footer content -->
       </div>
