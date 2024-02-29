@@ -13,7 +13,12 @@ error_reporting(0);
 session_start();
 include('../komponen/header.php'); 
 ?>
-
+<script src="../../select2/dist/js/select2.min.js"></script>
+<link href="../../select2/dist/css/select2.min.css" rel="stylesheet" />
+<script src="../../select2/jquery.min.js"></script>
+<script> $(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});</select>
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
@@ -46,19 +51,27 @@ include('../komponen/header.php');
                                     $idMax = $data['maxID'];
                                     $noUrut = (int) substr($idMax, 5);
                                     $noUrut++;
-                                    $newID = "S" . sprintf("%05s", $noUrut);
+                                    $newID = "D" . sprintf("%05s", $noUrut);
                                     ?>
                                     <form class="form-horizontal form-label-left" method="post" action="aksi.php" enctype="multipart/form-data">
-                                        <div class="form-group row ">
-                                            <label class="control-label col-md-3 col-sm-3 ">Tujuan Disposisi</label>
+                                    <div class="control-group row">
+                                            <label for="bagian" class="control-label col-md-3 col-sm-3 ">Tujuan Disposisi</label>
                                             <div class="col-md-9 col-sm-9 ">
-                                                <input type="text" class="form-control"  name="tujuandisposisi" placeholder="Masukan Tujuan Disposisi" type="text">
+                                                <select nama="tbbagian" id="idbagian" multiple="multiple" class="js-example-basic-multiple" required>
+                                                    <option value=""> - pilih -</option>
+                                                    
+                                                    <?php 
+                                                    $querybagian= mysql_query("SELECT * FROM tbbagian") or die (mysql_error($con));
+                                                    while($databagian = mysql_fetch_array($querybagian)){
+                                                    echo '<option value ="'.$databagian['idbagian'].'">'.$databagian['bagian']. '</option>';
+                                                    } 
+                                                    ?> 
                                             </div>
-                                        </div>
                                          <div class="form-group row ">
                                             <label class="control-label col-md-3 col-sm-3 ">Tanggal Disposisi</label>
                                             <div class="col-md-9 col-sm-9 ">
                                                 <input type="date" class="form-control"  name="tgldisposisi" placeholder="" type="date">
+                                         </div> 
                                          </div> 
                                          <div class="form-group row ">
                                             <label class="control-label col-md-3 col-sm-3 ">Batas Waktu</label>
