@@ -1,6 +1,6 @@
 <?php
 session_start();
-error_reporting(0);
+error_reporting(1);
   if($_SESSION['level']!=='superadmin'){
     
     echo"<script>window.alert('Anda tidak mempunyai hak akses untuk halaman ini!. Silahkan login kembali untuk masuk ke halaman yang anda tuju.');window.location=(../logout.php')</script>";
@@ -10,15 +10,13 @@ error_reporting(0);
 <!DOCTYPE html>
 <html lang="en">
 <?php
-session_start();
 include('../komponen/header.php'); 
 ?>
-<script src="../../select2/dist/js/select2.min.js"></script>
-<link href="../../select2/dist/css/select2.min.css" rel="stylesheet" />
-<script src="../../select2/jquery.min.js"></script>
-<script> $(document).ready(function() {
-    $('.js-example-basic-multiple').select2();
-});</select>
+<style>
+    .select2-container--default .select2-selection--multiple{
+        border-radius: unset;
+    }
+</style>
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
@@ -53,20 +51,22 @@ include('../komponen/header.php');
                                     $noUrut++;
                                     $newID = "D" . sprintf("%05s", $noUrut);
                                     ?>
-                                    <form class="form-horizontal form-label-left" method="post" action="aksi.php" enctype="multipart/form-data">
-                                    <div class="control-group row">
-                                            <label for="bagian" class="control-label col-md-3 col-sm-3 ">Tujuan Disposisi</label>
-                                            <div class="col-md-9 col-sm-9 ">
-                                                <select nama="tbbagian" id="idbagian" multiple="multiple" class="js-example-basic-multiple" required>
-                                                    <option value=""> - pilih -</option>
-                                                    
-                                                    <?php 
-                                                    $querybagian= mysql_query("SELECT * FROM tbbagian") or die (mysql_error($con));
-                                                    while($databagian = mysql_fetch_array($querybagian)){
-                                                    echo '<option value ="'.$databagian['idbagian'].'">'.$databagian['bagian']. '</option>';
-                                                    } 
-                                                    ?> 
-                                            </div>
+                                    <form class="form-horizontal form-label-left" method="POST" action="aksi.php" enctype="multipart/form-data">
+                                    <div class="form-group row">
+                                        <label for="bagian" class="control-label col-md-3 col-sm-3 ">Tujuan Disposisi</label>
+                                        <div class="col-md-9 col-sm-9 ">
+                                            <select name="tbbagian[]" id="idbagian" class="form-control js-example-basic-multiple" multiple="multiple" required>
+                                                <option value=""> - pilih -</option>
+                                                
+                                                <?php 
+                                                $querybagian= mysql_query("SELECT * FROM tbbagian") or die (mysql_error($con));
+                                                while($databagian = mysql_fetch_array($querybagian)){
+                                                echo '<option value ="'.$databagian['idbagian'].'">'.$databagian['bagian']. '</option>';
+                                                } 
+                                                ?> 
+                                            </select>
+                                        </div>
+                                    </div>
                                          <div class="form-group row ">
                                             <label class="control-label col-md-3 col-sm-3 ">Tanggal Disposisi</label>
                                             <div class="col-md-9 col-sm-9 ">
@@ -112,6 +112,14 @@ include('../komponen/header.php');
         </div>
     </div>
     <?php include('../komponen/js.php') ?>
+
+    <script> 
+        $(document).ready(function() {
+            $('.js-example-basic-multiple').select2({
+                placeholder: 'Pilih'
+            });
+        });
+    </script>
 </body>
 
 </html>

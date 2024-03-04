@@ -34,7 +34,7 @@
                       <li><a href="daftarbagian.php">Daftar Bagian</a></li>
                       </ul>
                   </li>
-                  <li><a href="Disposisi.php"><i class=" fa fa-pencil"></i> Disposisi<span ></span></a>
+                  <li><a href="disposisi.php"><i class=" fa fa-pencil"></i> Disposisi<span ></span></a>
                   </li>
                   <li><a href="rekapsuratMasuk.php"><i class=" fa fa-folder"></i> Rekap Surat Masuk<span ></span></a>
                   </li>

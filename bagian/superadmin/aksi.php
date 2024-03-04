@@ -33,26 +33,33 @@ if(isset($_POST['tblsuratmasuk'])){
 	} catch (\Throwable $error) {
 		echo $error;
 	}
-}
-;
+};
 
 	// Disposisi
 if (isset($_POST['disposisi'])) {
-	$idsuratmasuk = $_POST['idsuratmasuk'];
+	try {
+		$idsuratmasuk = $_POST['idsuratmasuk'];
+		// Perintah update status surat masuk dari SUrat Masuk menjadi Disposisi
+		$edit = mysql_query("update tbsuratmasuk set status_surat='Disposisi' WHERE idsuratmasuk=" . $idsuratmasuk . "") or die(mysql_error());
+	
+		// Insert ke tabel tbdisposisi
+		mysql_query("INSERT INTO tbdisposisi VALUES(null,'$_POST[tgldisposisi]','$_POST[bataswaktu]','$_POST[catatan]','$idsuratmasuk','$_POST[iduser]')") or die(mysql_error());
 
-	// Perintah update status surat masuk dari SUrat Masuk menjadi Disposisi
-	$edit = mysql_query("update tbsuratmasuk set status='Disposisi' WHERE idsuratmasuk=" . $idsuratmasuk . "") or die(mysql_error());
+		// insert ke tabel tujuan_disposisi
+		$id_disposisi_after_insert = mysql_insert_id();
 
-	// Tambahkan perintah insert data ke tabel disposisi di sini
-	if (isset($_POST['tbldisposisi'])) {
-		$iddisposisi = $_POST['iddisposisi']
+		$tbbagian = $_POST['tbbagian'];
+		if(count($tbbagian) > 0){
+			for ($i=0; $i < count($tbbagian); $i++) { 
+				mysql_query("INSERT INTO tujuan_disposisi VALUES(null,'$id_disposisi_after_insert','$tbbagian[$i]')") or die(mysql_error());
+			}
+		}
 
-		$save = mysql_query("INSERT INTO tbdisposisi JOIN tbsuratmasuk  VALUES('$_POST[iddesposisi]','$_POST[tujuandisposisi]','$_POST[tgldisposisi]','$_POST[bataswaktu]','$_POST[catatan]','$_POST[idsuratmasuk]") or die(mysql_error());
-}
-
-	header("Location: disposisi.php");
-}
-;
+		header("Location: disposisi.php");
+	} catch (\Throwable $th) {
+		echo $th;
+	}
+};
 
 if (isset($_POST['tblsuratmasuk'])) {
 	try {
@@ -71,8 +78,7 @@ if (isset($_POST['tblsuratmasuk'])) {
 	} catch (\Throwable $th) {
 		echo $th;
 	}
-}
-;
+};
 
 // Input Surat Keluar
 if(isset($_POST['tbsuratkeluar'])){	

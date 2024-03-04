@@ -1,5 +1,7 @@
 
     <!-- jQuery -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <script src="../../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="../../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -59,3 +61,5 @@
     <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
     <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
     <script type="text/javascript" language="javascript" src="../../js/dataTables.buttons.min/"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
